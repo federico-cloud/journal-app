@@ -6,13 +6,15 @@ import { RegisterScreen } from '../auth/RegisterScreen'
 export const AuthRouter = () => {
 
   return (
-    <>
-        <Routes>
+    <div className='auth__main'>
+      <div className='auth__box-container'>
+          <Routes>
             <Route path='login' element={<LoginScreen/>} />
             <Route path='register' element={<RegisterScreen/>} />
             
             <Route path='*' element={<LoginScreen/>} />
-        </Routes>
-    </>
+          </Routes>
+        </div>
+    </div>
   )
 }
