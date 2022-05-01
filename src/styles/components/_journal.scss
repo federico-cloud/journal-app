@@ -36,3 +36,49 @@
         color: lighten($color: $primary, $amount: 10);
     }
 }
+
+.journal__entries{
+    margin-top: 30px;
+    overflow-y: scroll;
+}
+
+.journal__entry{
+    background-color: #fff;
+    border-radius: 10px;
+    color: $dark-grey;
+    cursor: pointer;
+    display: flex;
+    margin: 10px auto;
+    overflow: hidden;
+    width: 95%;
+}
+
+.journal__entry-picture{
+    height: 110px;
+    width:  110px;
+    object-fit: cover;
+}
+
+.journal__entry-body{
+    padding: 5px;
+}
+.journal__entry-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+.journal__entry-content{
+    font-size: 10px;
+    padding: 5px;
+}
+
+.journal__entry-date-box{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.journal__entry-date-box span{
+    font-size: 5px;
+}
