@@ -1,12 +1,13 @@
-import { createUserWithEmailAndPassword, signInWithPopup, updateProfile } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, updateProfile } from 'firebase/auth';
 import { auth, googleAuthProvider } from '../firebase/firebase';
 import { types } from '../types/types'
 
 export const authStart = (email, password) => {
     return (dispatch) => {
-        setTimeout(() => {
-            dispatch(login(email, password));
-        }, 3000);
+        signInWithEmailAndPassword(auth, email, password)
+            .then(({user}) => {
+              dispatch(login(user.uid, user.displayName));
+            });
     }
 }
 
