@@ -19,7 +19,7 @@
 }
 
 .btn-primary{
-    background-color: $primary;
+    background-color: darken($color: $primary, $amount: 20);
     border-radius: 2px;
 
     &:disabled{
